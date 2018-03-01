@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27406.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftDiscord.ConsoleHost", "LiftDiscord.ConsoleHost\LiftDiscord.ConsoleHost.csproj", "{2CD4C500-F868-4B58-8E64-4EC79648DFF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftDiscord.DiscordClient", "LiftDiscord.DiscordClient\LiftDiscord.DiscordClient.csproj", "{72150809-C620-4800-B02E-E481DA0A2585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftDiscord.PathOfBuilding", "LiftDiscord.PathOfBuilding\LiftDiscord.PathOfBuilding.csproj", "{D40480A8-CA64-4CF1-B420-7D6D3D400604}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CD4C500-F868-4B58-8E64-4EC79648DFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD4C500-F868-4B58-8E64-4EC79648DFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD4C500-F868-4B58-8E64-4EC79648DFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD4C500-F868-4B58-8E64-4EC79648DFF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72150809-C620-4800-B02E-E481DA0A2585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72150809-C620-4800-B02E-E481DA0A2585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72150809-C620-4800-B02E-E481DA0A2585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72150809-C620-4800-B02E-E481DA0A2585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40480A8-CA64-4CF1-B420-7D6D3D400604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40480A8-CA64-4CF1-B420-7D6D3D400604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40480A8-CA64-4CF1-B420-7D6D3D400604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40480A8-CA64-4CF1-B420-7D6D3D400604}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
