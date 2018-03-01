@@ -11,13 +11,6 @@ namespace LiftDiscord.DiscordClient
 {
     public class Client
     {
-
-#if DEBUG
-        private const long ServerId = 411432272546496514;
-#else
-        private const long ServerId = 100535666546315264;
-#endif
-
         private DiscordSocketClient _client;
         private CommandService _commands;
         private IServiceProvider _services;
@@ -52,13 +45,6 @@ namespace LiftDiscord.DiscordClient
             await _client.StartAsync();
             await _client.SetStatusAsync(UserStatus.Online);
             await _client.SetGameAsync("Command Lifting");
-
-            await Task.Delay(2000);
-
-            var guilds = _client.Guilds.ToList();
-            var c = await _client.GetGuild(411432272546496514).TextChannels.First().GetMessagesAsync(2).ToList();
-
-
             await Task.Delay(-1);
         }
 
@@ -74,12 +60,6 @@ namespace LiftDiscord.DiscordClient
         {
             // Don't process the command if it was a System Message
             var message = messageParam as SocketUserMessage;
-
-            if (message.Channel is SocketTextChannel textChan && textChan.Guild.Id != ServerId)
-            {
-                return;
-            }
-
             if (message == null) return;
 
             // Create a number to track where the prefix ends and the command begins
