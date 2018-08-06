@@ -4,7 +4,7 @@ using System.Net;
 
 namespace LiftDiscord.DiscordClient.Commands
 {
-    public class Lmgtgfy : ModuleBase
+    public class LmgtgfyModule : ModuleBase
     {
         [Command("google")]
         public async Task LetMeGoogleThatForYou(params string[] args)

@@ -2,58 +2,90 @@
 using System.Threading.Tasks;
 using System;
 using System.Linq;
-using System.Net.Http;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using LiftDiscord.DiscordClient.Utils.PoeWiki;
+using Discord;
 
 namespace LiftDiscord.DiscordClient.Commands
 {
     public class PoeWikiModule : ModuleBase
     {
+        const string thumbnailUrl = "https://i.imgur.com/p1xdSCW.png";
+
         [Command("poewiki")]
-        public async Task PoeWiki(params string[] args)
+        public Task PoeWikiAsync(params string[] args) => WikiAsync(args);
+
+        [Command("wiki")]
+        public async Task WikiAsync(params string[] args)
         {
             var noPeople = args.Where(c => !c.StartsWith("<")).ToList();
+
             var query = Uri.EscapeDataString(string.Join(' ', noPeople));
+            var hasQuery = !string.IsNullOrEmpty(query);
 
             var people = string.Join(' ', args.Where(c => c.StartsWith("<@") && c.EndsWith(">")));
 
-            var reply = "";
-
-            if (noPeople.Count == 0)
+            if (!hasQuery)
             {
-                reply += "**Check out the Path of Exile Wiki here:** <https://pathofexile.gamepedia.com>";
-            }
-            else
-            {
-                try
-                {
-                    using (var cli = new HttpClient())
-                    {
-                        var queryUri = $"https://pathofexile.gamepedia.com/api.php?action=opensearch&search={query}&suggest=true&redirects=resolve";
-                        var resultString = await cli.GetStringAsync(queryUri).ConfigureAwait(false);
-                        var arrResult = JsonConvert.DeserializeObject<JArray>(resultString);
-
-                        reply += (string)((JArray)arrResult.Last).First;
-                    }
-                }
-                catch (Exception)
-                {
-                    reply += $"<https://pathofexile.gamepedia.com/index.php?search={query}>";
-                }
-
-            }
-            if (string.IsNullOrWhiteSpace(reply))
-            {
-                reply = $"<https://pathofexile.gamepedia.com/index.php?search={query}>";
+                await ReplyWithWikiIndexAsync(people);
+                return;
             }
 
-            if (!string.IsNullOrWhiteSpace(people))
+            var (title, pageResultFromQuery) = await WikiFetcher.OpenSearchAsync(query);
+            var hasPageResult = !string.IsNullOrEmpty(pageResultFromQuery);
+
+            if (!hasPageResult)
             {
-                reply = $"{people}: " + reply;
+                await ReplyWithWikiManualSearch(people, query);
+                return;
             }
 
-            await ReplyAsync(reply);
+            var pageText = await WikiFetcher.GetWikiPage(title);
+            await ReplyWithWikiPageAndText(people, pageResultFromQuery, title, pageText);
+        }
+
+        private Task ReplyWithWikiIndexAsync(string peopleTags)
+        {
+            var embed = new EmbedBuilder()
+                .WithColor(Color.Blue)
+                .WithTitle("Path of Exile Wiki")
+                .WithThumbnailUrl(thumbnailUrl)
+                .WithUrl("https://pathofexile.gamepedia.com")
+                .WithDescription("Go [here](https://pathofexile.gamepedia.com) to read more about Path of Exile. There's a lot to learn. Oh, there's a search feature as well.")
+                .WithFooter("https://pathofexile.gamepedia.com")
+                .Build();
+
+            return ReplyAsync(peopleTags, false, embed);
+        }
+
+        private Task ReplyWithWikiManualSearch(string peopleTags, string query)
+        {
+            var decodedQuery = Uri.UnescapeDataString(query);
+            var embed = new EmbedBuilder()
+                .WithColor(Color.Blue)
+                .WithTitle($"Path of Exile Wiki: Search for {decodedQuery}")
+                .WithThumbnailUrl(thumbnailUrl)
+                .WithUrl($"https://pathofexile.gamepedia.com/index.php?search={query}")
+                .WithDescription($"[Search the wiki for {decodedQuery}](https://pathofexile.gamepedia.com/index.php?search={query}), and you shall find your answer.")
+                .WithFooter($"https://pathofexile.gamepedia.com")
+                .Build();
+
+            return ReplyAsync(peopleTags, false, embed);
+        }
+
+        private Task ReplyWithWikiPageAndText(string people, string url, string title, string text)
+        {
+            text = text + $"\n\n**[Read more here...]({url})**";
+
+            var embed = new EmbedBuilder()
+                .WithColor(Color.Green)
+                .WithTitle($"Path of Exike Wiki: {title}")
+                .WithThumbnailUrl(thumbnailUrl)
+                .WithDescription(text)
+                .WithUrl($"{url}")
+                .WithFooter(url)
+                .Build();
+
+            return ReplyAsync(people, false, embed);
         }
     }
 

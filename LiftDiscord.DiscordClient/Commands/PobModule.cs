@@ -79,8 +79,8 @@ namespace LiftDiscord.DiscordClient.Commands
                 .WithColor(Color.Blue)
                 .WithTitle($"{c.Class} ({c.Ascendancy}), level {c.Level}")
                 .WithDescription($"```STR: {s.Str}, DEX: {s.Dex}, INT: {s.Int}```")
-                .AddInlineField("Defense", defenses)
-                .AddInlineField("Offense", offenses);
+                .AddField("Defense", defenses, true)
+                .AddField("Offense", offenses, true);
         }
 
         private static string StatLine(string col, float val, bool ignoreIfZero = true, bool appendLineBreak = true, 
