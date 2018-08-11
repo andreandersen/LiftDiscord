@@ -1,0 +1,12 @@
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\bin\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.deps.json
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\bin\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.dll
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\bin\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.pdb
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\bin\Debug\netcoreapp2.0\LiftDiscord.PathOfBuilding.dll
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\bin\Debug\netcoreapp2.0\LiftDiscord.PathOfBuilding.pdb
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\obj\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.csprojAssemblyReference.cache
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\obj\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.csproj.CoreCompileInputs.cache
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\obj\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.AssemblyInfoInputs.cache
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\obj\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.AssemblyInfo.cs
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\obj\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.csproj.CopyComplete
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\obj\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.dll
+C:\Users\nathan\Desktop\LiftDiscord-master\LiftDiscord-master\LiftDiscord.DiscordClient\obj\Debug\netcoreapp2.0\LiftDiscord.DiscordClient.pdb
