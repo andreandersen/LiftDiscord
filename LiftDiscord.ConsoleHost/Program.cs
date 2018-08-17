@@ -7,7 +7,7 @@ namespace LiftDiscord.ConsoleHost
     {
         public static async Task Main(string[] args)
         {
-            var client = new Client("......");
+            var client = new Client(".....");
             await client.RunAsync();
         }
     }
