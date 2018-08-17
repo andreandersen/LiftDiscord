@@ -16,7 +16,7 @@ namespace LiftDiscord.DiscordClient.Commands
             //Creates the URL variable that links to  build, needs to be updated if builds move
             var embed = new EmbedBuilder()
                   .WithColor(Color.Blue)
-                  .WithTitle("Liftings Frostbolt Totem Hierophant 3.3 Guide")
+                  .WithTitle("Liftings frostbolt Totem Hierophant 3.3 Guide")
                   .WithThumbnailUrl("https://i.imgur.com/RFbq7b2.png")
                   .WithUrl("https://www.pathofexile.com/forum/view-thread/1931084")
                   .WithDescription("Liftings Frostbolt Hierophant is here to serve up some nice chilly death on a budget")
@@ -25,7 +25,7 @@ namespace LiftDiscord.DiscordClient.Commands
 
             //Reply from the bot with the embeded URL as an argument
             await ReplyAsync(
-            "Liftings Frostbolt totem build is still viable :lnbFist:" + "\n" +
+            "Liftings frostbolt totem build is still viable! <:lnbFist:480141292417056768> " + "\n" +
                "Here is the link to the forum page that is " + "updated every new league!", false, embed, null);
         }
 
@@ -45,7 +45,7 @@ namespace LiftDiscord.DiscordClient.Commands
 
             //Reply from the bot with the embeded URL as an argument
             await ReplyAsync(
-            "Liftings warchief totem build is still viable :lnbFist:" + "\n" +
+            "Liftings warchief totem build is still viable! <:lnbFist:480141292417056768> " + "\n" +
                "Here is the link to the forum page that is " + "updated every new league!", false, embed, null);
         }
     }
