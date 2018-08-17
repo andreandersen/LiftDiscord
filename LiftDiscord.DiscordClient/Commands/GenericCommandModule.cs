@@ -30,8 +30,8 @@ namespace LiftDiscord.DiscordClient.Commands
 
             //Reply from the bot with the embeded URL as an argument
             await ReplyAsync(
-            "Liftings warchief totem build is still viable :lnbFist:" + "\n" +
-               "Here is the link to the forum page that is " + "updated every new league!", false, embed, null);
+            "Engineering eternity has some wonderful build guides for new players. Here is a link to the playlist" +
+            " so that you can get a better understanding of the game as a whole!", false, embed, null);
         }
 
         [Command("Delve")]
@@ -59,10 +59,10 @@ namespace LiftDiscord.DiscordClient.Commands
             //Creates the URL to Ghazzy's video on crafting basics
             var embed = new EmbedBuilder()
                   .WithColor(Color.Blue)
-                  .WithTitle("Delve Information thread")
+                  .WithTitle("Intro to crafting")
                   .WithThumbnailUrl("https://i.imgur.com/CtVbxZC.png")
                   .WithUrl("https://youtu.be/ehngnPAn4NY")
-                  .WithDescription("Ghazzy's basic crafting guide for new players that does a wonderful job explaining recipeas and orbs")
+                  .WithDescription("Ghazzy's basic crafting guide for new players that does a wonderful job explaining recipes and orbs")
                   .WithFooter("https://youtu.be/ehngnPAn4NY")
                   .Build();
 
@@ -70,6 +70,5 @@ namespace LiftDiscord.DiscordClient.Commands
            "Here is a basic crafting overview provided by https://www.twitch.tv/ghazzytv he covers everything you need to know about" +
            " crafting recipes, the different types of orbs, and what is the difference between a prefix and a suffix. ", false, embed, null);
         }
-
     }
 }
