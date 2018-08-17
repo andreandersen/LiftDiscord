@@ -60,7 +60,7 @@ namespace LiftDiscord.DiscordClient.Commands
             var embed = new EmbedBuilder()
                   .WithColor(Color.Blue)
                   .WithTitle("Delve Information thread")
-                  .WithThumbnailUrl("https://images-ext-2.discordapp.net/external/NaIsfVDdErrJedqvyYOneNrWfkkCgpfXHRfH_BRsgGg/https/static-cdn.jtvnw.net/jtv_user_pictures/d0a3250e-d66d-4157-9ee0-a795a91204ce-profile_image-300x300.png")
+                  .WithThumbnailUrl("https://i.imgur.com/CtVbxZC.png")
                   .WithUrl("https://youtu.be/ehngnPAn4NY")
                   .WithDescription("Ghazzy's basic crafting guide for new players that does a wonderful job explaining recipeas and orbs")
                   .WithFooter("https://youtu.be/ehngnPAn4NY")
