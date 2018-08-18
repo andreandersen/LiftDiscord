@@ -13,6 +13,9 @@
     <ProjectReference Include="..\LiftDiscord.DiscordClient\LiftDiscord.DiscordClient.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="Properties\webjob-publish-settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Settings.job">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
