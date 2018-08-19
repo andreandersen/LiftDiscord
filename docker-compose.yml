@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY}liftdiscordconsolehost
     build:
       context: .
-      dockerfile: LiftDiscord.ConsoleHost/Dockerfile
+      dockerfile: Dockerfile
