@@ -7,7 +7,9 @@ namespace LiftDiscord.ConsoleHost
     {
         public static async Task Main(string[] args)
         {
-            var client = new Client("");
+            var key = System.Environment.GetEnvironmentVariable("discordkey");
+
+            var client = new Client(key);
             await client.RunAsync();
         }
     }

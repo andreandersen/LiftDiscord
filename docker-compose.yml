@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  liftdiscord.consolehost:
+    image: ${DOCKER_REGISTRY}liftdiscordconsolehost
+    build:
+      context: .
+      dockerfile: LiftDiscord.ConsoleHost/Dockerfile
