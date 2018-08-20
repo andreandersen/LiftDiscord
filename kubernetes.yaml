@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: liftdiscord
 spec:
+  revisionHistoryLimit: 1
+  replicas: 1
   selector:
     matchLabels:
       app: liftdiscord
@@ -11,7 +13,6 @@ spec:
       labels:
         app: liftdiscord
     spec:
-      revisionHistoryLimit: 1
       containers:
       - name: liftdiscord
         image: andre.azurecr.io/liftdiscord:$BUILDID
