@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liftdiscord
+spec:
+  selector:
+    matchLabels:
+      app: liftdiscord
+  template:
+    metadata:
+      labels:
+        app: liftdiscord
+    spec:
+      containers:
+      - name: liftdiscord
+        image: andre.azurecr.io/andreandersen/liftdiscord:latest
+        env:
+          - name: BOT_discordkey
+            valueFrom:
+              secretKeyRef:
+                name: liftdiscord
+                key: discordkey
+                
+
