@@ -34,7 +34,7 @@ namespace LiftDiscord.DiscordClient.Commands
 
                 await ReplyAsync("", false, e);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await ReplyAsync("Error fetching build data.");
             }
