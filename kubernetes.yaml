@@ -11,6 +11,7 @@ spec:
       labels:
         app: liftdiscord
     spec:
+      revisionHistoryLimit: 1
       containers:
       - name: liftdiscord
         image: andre.azurecr.io/liftdiscord:$BUILDID
