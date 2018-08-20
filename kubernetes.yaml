@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: liftdiscord
-        image: andre.azurecr.io/andreandersen/liftdiscord:latest
+        image: andre.azurecr.io/andreandersen/liftdiscord:$BUILDID
         imagePullPolicy: Always
         env:
           - name: BOT_discordkey
