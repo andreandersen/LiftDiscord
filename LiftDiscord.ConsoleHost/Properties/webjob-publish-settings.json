@@ -1,0 +1,9 @@
+{
+  "$schema":  "http://json.schemastore.org/webjob-publish-settings",
+  "runMode": "Continuous",
+  "webJobName": "LiftDiscord.ConsoleHost",
+  "startTime": null,
+  "endTime": null,
+  "jobRecurrenceFrequency": null,
+  "interval": null
+}

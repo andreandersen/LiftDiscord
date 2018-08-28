@@ -84,9 +84,10 @@ namespace LiftDiscord.DiscordClient
 
         private readonly RmtScanner _rmtScanner;
 
-        private async Task LogAsync(LogMessage msg)
+        private Task LogAsync(LogMessage msg)
         {
             Console.WriteLine(msg.ToString());
+            return Task.CompletedTask;
         }
     }
 }

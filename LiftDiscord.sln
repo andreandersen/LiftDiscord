@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftDiscord.ConsoleHost", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftDiscord.DiscordClient", "LiftDiscord.DiscordClient\LiftDiscord.DiscordClient.csproj", "{72150809-C620-4800-B02E-E481DA0A2585}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiftDiscord.PathOfBuilding", "LiftDiscord.PathOfBuilding\LiftDiscord.PathOfBuilding.csproj", "{D40480A8-CA64-4CF1-B420-7D6D3D400604}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftDiscord.PathOfBuilding", "LiftDiscord.PathOfBuilding\LiftDiscord.PathOfBuilding.csproj", "{D40480A8-CA64-4CF1-B420-7D6D3D400604}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

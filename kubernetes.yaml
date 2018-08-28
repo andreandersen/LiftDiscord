@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liftdiscord
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: liftdiscord
+  template:
+    metadata:
+      labels:
+        app: liftdiscord
+    spec:
+      containers:
+      - name: liftdiscord
+        image: andre.azurecr.io/liftdiscord:$BUILDID
+        imagePullPolicy: Always
+        env:
+          - name: BOT_discordkey
+            valueFrom:
+              secretKeyRef:
+                name: liftdiscord
+                key: discordkey
+      imagePullSecrets:
+        - name: regcred
