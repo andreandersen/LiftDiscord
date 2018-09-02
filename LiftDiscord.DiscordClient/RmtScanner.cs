@@ -35,6 +35,7 @@ namespace LiftDiscord.DiscordClient
             "poe4orbs.com",
             "poebuilds.net",
             "poe-market.com",
+            "poecurrency.gg",
             "poecurrency.shop",
             "poecurrencybuy.com",
             "r4pg.com",
