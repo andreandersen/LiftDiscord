@@ -16,7 +16,7 @@ namespace LiftDiscord.DiscordClient.Commands
             //Creates the URL variable that links to  build, needs to be updated if builds move
             var embed = new EmbedBuilder()
                   .WithColor(Color.Blue)
-                  .WithTitle("Liftings frostbolt Totem Hierophant 3.3 Guide")
+                  .WithTitle("Liftings frostbolt Totem Hierophant 3.4 Guide")
                   .WithThumbnailUrl("https://i.imgur.com/RFbq7b2.png")
                   .WithUrl("https://www.pathofexile.com/forum/view-thread/1931084")
                   .WithDescription("Liftings Frostbolt Hierophant is here to serve up some nice chilly death on a budget")
@@ -36,7 +36,7 @@ namespace LiftDiscord.DiscordClient.Commands
             //Creates the URL variable that links to  build, needs to be updated if builds move
             var embed = new EmbedBuilder()
                   .WithColor(Color.Blue)
-                  .WithTitle("Liftings Warchief Totem Champion 3.3 Guide")
+                  .WithTitle("Liftings Warchief Totem Champion 3.4 Guide")
                   .WithThumbnailUrl("https://i.imgur.com/RFbq7b2.png")
                   .WithUrl("https://www.pathofexile.com/forum/view-thread/1960538")
                   .WithDescription("Liftings Warchief totem is locked and loaded for some more brotastic murder")
