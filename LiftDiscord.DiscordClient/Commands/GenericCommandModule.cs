@@ -70,5 +70,23 @@ namespace LiftDiscord.DiscordClient.Commands
            "Here is a basic crafting overview provided by https://www.twitch.tv/ghazzytv he covers everything you need to know about" +
            " crafting recipes, the different types of orbs, and what is the difference between a prefix and a suffix. ", false, embed, null);
         }
+        [Command("PoBGuide")]
+        public async Task EngineeringEternityPoBGuide()
+        {
+            //Creates the URL variable that links to  build, needs to be updated if builds move
+            var embed = new EmbedBuilder()
+                  .WithColor(Color.Blue)
+                  .WithTitle("Engineering Eternity's extensive guide on Path of Building")
+                  .WithThumbnailUrl("https://i.imgur.com/SOB4UDM.jpg")
+                  .WithUrl("https://www.youtube.com/watch?v=iLpKZVNTOo8")
+                  .WithDescription("Engineering Eternity goes over everything you need to know when you beginning Path of Exile!")
+                  .WithFooter("https://www.youtube.com/watch?v=iLpKZVNTOo8")
+                  .Build();
+
+            //Reply from the bot with the embeded URL as an argument
+            await ReplyAsync(
+            "Engineering eternity extensively covers Path of Building in the attached video that will give you an in depth look" +
+            "at this essential Path of Exile utility", false, embed, null);
+        }
     }
 }

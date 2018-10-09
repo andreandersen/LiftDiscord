@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 /LiftDiscord.ConsoleHost/Properties/PublishProfiles
+LiftDiscord.ConsoleHost/Program.cs
+LiftDiscord.ConsoleHost/Program.cs
