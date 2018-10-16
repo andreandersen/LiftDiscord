@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Linq;
 using Discord.Commands;
 using System.Threading.Tasks;
-using System.Net;
 using Discord;
 /**
- * Written by Nathan C. Bishop
- */
+* Written by Nathan C. Bishop
+*/
 namespace LiftDiscord.DiscordClient.Commands
 {
     public class GenericCommandsModule : ModuleBase
     {
-       
         //Guides Command
-        [Command("Guides")]
+        [Command("guides")]
         public async Task EngineeringEternityNewPlayerGuides()
         {
             //Creates the URL variable that links to  build, needs to be updated if builds move
@@ -34,7 +32,7 @@ namespace LiftDiscord.DiscordClient.Commands
             " so that you can get a better understanding of the game as a whole!", false, embed, null);
         }
 
-        [Command("Delve")]
+        [Command("delve")]
         public async Task DelveLeague()
         {
             //Creates the URL variable that links to  build, needs to be updated if builds move
@@ -53,7 +51,7 @@ namespace LiftDiscord.DiscordClient.Commands
             " Below is a link to a compilation of information about patch 3.4 and delve league itself. ", false, embed, null);
         }
 
-        [Command("Crafting")]
+        [Command("crafting")]
         public async Task CraftingGuide()
         {
             //Creates the URL to Ghazzy's video on crafting basics
@@ -70,7 +68,7 @@ namespace LiftDiscord.DiscordClient.Commands
            "Here is a basic crafting overview provided by https://www.twitch.tv/ghazzytv he covers everything you need to know about" +
            " crafting recipes, the different types of orbs, and what is the difference between a prefix and a suffix. ", false, embed, null);
         }
-        [Command("PoBGuide")]
+        [Command("pobguide")]
         public async Task EngineeringEternityPoBGuide()
         {
             //Creates the URL variable that links to  build, needs to be updated if builds move

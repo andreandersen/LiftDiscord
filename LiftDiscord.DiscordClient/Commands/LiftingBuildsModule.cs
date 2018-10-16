@@ -10,7 +10,7 @@ namespace LiftDiscord.DiscordClient.Commands
     public class LiftingBuildsModule : ModuleBase
     {
         //Frostbolt command
-        [Command("Frostbolt")]
+        [Command("frostbolt")]
         public async Task liftingFrostbolt()
         {
             //Creates the URL variable that links to  build, needs to be updated if builds move
@@ -30,7 +30,7 @@ namespace LiftDiscord.DiscordClient.Commands
         }
 
         //Warchief Command
-        [Command("Warchief")]
+        [Command("warchief")]
         public async Task LiftingWarchief()
         {
             //Creates the URL variable that links to  build, needs to be updated if builds move

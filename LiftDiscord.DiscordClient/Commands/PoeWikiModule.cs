@@ -12,17 +12,17 @@ namespace LiftDiscord.DiscordClient.Commands
         const string thumbnailUrl = "https://i.imgur.com/p1xdSCW.png";
 
         [Command("poewiki")]
-        public Task PoeWikiAsync(params string[] args) => WikiAsync(args);
+        public Task PoeWikiAsync(params string[] term) => WikiAsync(term);
 
         [Command("wiki")]
-        public async Task WikiAsync(params string[] args)
+        public async Task WikiAsync(params string[] term)
         {
-            var noPeople = args.Where(c => !c.StartsWith("<")).ToList();
+            var noPeople = term.Where(c => !c.StartsWith("<")).ToList();
 
             var query = Uri.EscapeDataString(string.Join(' ', noPeople));
             var hasQuery = !string.IsNullOrEmpty(query);
 
-            var people = string.Join(' ', args.Where(c => c.StartsWith("<@") && c.EndsWith(">")));
+            var people = string.Join(' ', term.Where(c => c.StartsWith("<@") && c.EndsWith(">")));
 
             if (!hasQuery)
             {
