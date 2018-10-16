@@ -26,13 +26,7 @@ namespace LiftDiscord.DiscordClient.Commands
                 .SelectMany(e =>
                     e.DeclaredMethods.Where(m =>
                     m.CustomAttributes.Any(a =>
-                    a.AttributeType == typeof(CommandAttribute))), (c, m) =>
-                        new
-                        {
-                            Class = c,
-                            Method = m
-                        })
-                .Select(c => GetCommand(c.Class, c.Method))
+                    a.AttributeType == typeof(CommandAttribute))), (c, m) => GetCommand(c, m))
                 .ToList();
 
             string GetCommand(TypeInfo t, MethodInfo m)
